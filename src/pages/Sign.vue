@@ -140,10 +140,13 @@
 <script>
 import { useRoute, useRouter } from 'vue-router';
 import { useStore } from 'vuex';
-import { ref, reactive, defineComponent } from 'vue';
+import {
+  ref, reactive, defineComponent, defineAsyncComponent,
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
-import LanguageSwitcher from 'components/LanguageSwitcher';
+
+const LanguageSwitcher = defineAsyncComponent(() => import('components/LanguageSwitcher'));
 
 export default defineComponent({
   setup() {

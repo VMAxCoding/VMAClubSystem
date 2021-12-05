@@ -1,7 +1,6 @@
 <template>
-  <q-layout view="hHh Lpr fFf" class="layout">
+  <q-layout view="hHh Lpr fFf">
     <Header />
-    <Drawer />
     <Footer />
     <q-page-container>
       <router-view v-slot="{ Component }">
@@ -14,16 +13,15 @@
 
 <script>
 import {
-  reactive, defineComponent, provide, computed,
+  defineComponent, provide, computed, defineAsyncComponent,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 import { useMeta } from 'quasar';
 
-import BottomRightBtns from 'components/BottomRightBtns';
-import Header from './Header';
-import Drawer from './Drawer';
-import Footer from './Footer';
+const BottomRightBtns = defineAsyncComponent(() => import('components/BottomRightBtns'));
+const Header = defineAsyncComponent(() => import('./Header'));
+const Footer = defineAsyncComponent(() => import('./Footer'));
 
 export default defineComponent({
   setup() {
@@ -40,11 +38,6 @@ export default defineComponent({
       },
     });
     useMeta(meta);
-
-    const drawer = reactive({
-      mini: false,
-      model: true,
-    });
     const goList = [
       { icon: 'home', name: 'Index', to: { name: 'Index' } },
       { icon: 'school', name: 'ClubCenter', to: { name: 'ClubCenter' } },
@@ -52,28 +45,11 @@ export default defineComponent({
       { icon: 'help', name: 'Help', to: { name: 'Help' } },
     ];
     provide('goList', goList);
-    provide('drawer', drawer);
   },
   components: {
     Header,
-    Drawer,
     Footer,
     BottomRightBtns,
   },
 });
 </script>
-<style lang="scss" scoped>
-.body--light {
-  .layout {
-    background: #fff;
-    color: #70757a;
-  }
-}
-
-.body--dark {
-  .layout {
-    background: var(--q-dark);
-    color: #9aa0a6;
-  }
-}
-</style>

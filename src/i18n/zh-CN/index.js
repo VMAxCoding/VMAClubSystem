@@ -7,6 +7,7 @@ export default {
     error: '错误',
   },
   pages: {
+    VMAOfficial: '万科梅沙书院',
     Index: '首页',
     ClubCenter: '社团中心',
     UserCenter: '用户中心',
@@ -29,6 +30,13 @@ export default {
     manage: '管理你的账户',
     policy: '隐私政策',
     service: '服务条款',
+  },
+  index: {
+    hero: {
+      title: '社团中心',
+      subtitle: '万科梅沙书院',
+      slogan: '找到你喜欢的社团',
+    },
   },
   club: {
     list: {

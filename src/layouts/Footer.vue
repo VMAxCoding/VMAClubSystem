@@ -1,9 +1,8 @@
 <template>
-  <q-footer v-if="show" class="lt-sm">
+  <q-footer v-if="show" class="lt-md">
     <q-tabs
       class="tabs shadow-8"
       align="justify"
-      dense
       indicator-color="transparent"
       active-color="primary"
     >

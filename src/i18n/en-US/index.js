@@ -7,6 +7,7 @@ export default {
     error: 'Error',
   },
   pages: {
+    VMAOfficial: 'Vanke Meisha Academy',
     Index: 'Index',
     ClubCenter: 'Club Center',
     UserCenter: 'User Center',
@@ -29,6 +30,13 @@ export default {
     manage: 'Manage your account',
     policy: 'Privacy Policy',
     service: 'Terms of Service',
+  },
+  index: {
+    hero: {
+      title: 'Club Center',
+      subtitle: 'Vanke Meisha Academy',
+      slogan: 'Find the clubs you love',
+    },
   },
   club: {
     list: {

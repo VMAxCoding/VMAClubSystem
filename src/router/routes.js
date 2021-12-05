@@ -7,7 +7,7 @@ const routes = [
   {
     name: 'ClubCenter',
     path: '/club',
-    component: () => import('src/pages/ClubCenter.vue'),
+    component: () => import('src/pages/Club/Center'),
     meta: {
       needAuth: true,
     },
@@ -15,7 +15,7 @@ const routes = [
   {
     name: 'ClubDetail',
     path: '/club/:id',
-    component: () => import('pages/ClubDetail.vue'),
+    component: () => import('pages/Club/Detail'),
     meta: {
       needAuth: true,
     },
@@ -38,7 +38,6 @@ const routes = [
     path: '/login',
     component: () => import('pages/Sign.vue'),
     meta: {
-      showDrawer: false,
       showFooter: false,
       showHeader: false,
       showBRB: false,
@@ -49,7 +48,6 @@ const routes = [
     path: '/:catchAll(.*)*',
     component: () => import('pages/404.vue'),
     meta: {
-      showDrawer: false,
       showFooter: false,
       showHeader: false,
       showBRB: false,
