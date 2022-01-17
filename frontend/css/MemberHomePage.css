@@ -69,7 +69,7 @@ body{
     width: 200px;
     height: 100%;
     position: fixed;
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 12px;
     background-color: #1D1D1F;
 }
@@ -88,7 +88,7 @@ body{
 .tag_list .tags button{
     transition: 0.5s;
     display: block;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0;
     color: #555557;
     background: none;
     font-weight: 100;
